@@ -1,0 +1,123 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  & .main-menu{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    left: -200vw;
+    top: 50px;
+    transition: all .5s;
+    &.open{
+      left: 0;
+    }
+  }
+
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .topLeft{
+    display: flex;
+    align-items: center;
+    & .mobile_menu{
+      margin-right: 15px;
+    }
+  }
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  color: darkblue;
+  cursor: pointer;
+}
+
+.topRight{
+  display: flex;
+  align-items: center;
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #555;
+  font-size: 20px;
+
+  &:hover{
+    color: red;
+  }
+
+  &.setting{
+    margin-right: 30px;
+    &:hover{
+      color: blue;
+    }
+  }
+
+}
+
+.topIconBadge{
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.topAvatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header_menu{
+  background: none;
+  color: #000;
+  font-size: 22px;
+}
+
+.mobile_menu{
+  display: none;
+}
+
+
+@media (max-width: 991px) {
+
+  .logo{
+    font-size: 20px !important;
+  }
+
+  .mobile_menu{
+    display: block;
+  }
+
+}
+
+.admin_container{
+  padding: 10px 15px;
+  flex: 4;
+  width: 100%;
+  @media screen and (max-width: 991px) {
+    overflow: auto;
+  }
+}
